@@ -29,3 +29,13 @@ npm install
 ```  
 npm run dev
 ```
+
+## **Cat's Additions**
+ Personalization to me.
+ Update theme.
+ Add drawing section.
+ Update Astro to version 5.5.5.
+
+ ## **To Dos**
+ - [ ] Make responsive
+ - [ ] Add tests
