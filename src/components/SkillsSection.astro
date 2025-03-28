@@ -11,6 +11,13 @@ import Git from "@assets/icons/git.astro";
 import Github from "@assets/icons/github.astro";
 import Vscode from "@assets/icons/vscode.astro";
 import Figma from "@assets/icons/figma.astro";
+import Maven from "@assets/icons/maven.astro";
+import Apigee from "@assets/icons/apigee.astro";
+import Angular from "@assets/icons/angular.astro";
+import ExtJS from "@assets/icons/extjs.astro";
+import Java from "@assets/icons/java.astro";
+import CPlusPlus from "@assets/icons/c-plus-plus.astro";
+import ImageContainer from "./ImageContainer.astro";
 ---
 
 <section class="my-20">
@@ -28,19 +35,32 @@ import Figma from "@assets/icons/figma.astro";
     <IconContainer name="Javascript">
       <Javascript size="size-9" />
     </IconContainer>
+    <IconContainer name="Angular">
+      <Angular size="size-9" />
+    </IconContainer>
     <IconContainer name="React">
       <React size="size-9" />
     </IconContainer>
-    <IconContainer name="Tailwind">
-      <Tailwind size="size-9" />
+    <IconContainer name="Ext JS">
+      <ExtJS size="size-9" />
     </IconContainer>
     <IconContainer name="Astro">
       <AstroIcon size="size-9" />
     </IconContainer>
+    <IconContainer name="Tailwind">
+      <Tailwind size="size-9" />
+    </IconContainer>
   </div>
 
   <h3 class="text-xl text-zinc-200 font-medium mt-6 mb-4">Backend</h3>
-  <div class="flex flex-wrap gap-5"></div>
+  <div class="flex flex-wrap gap-5">
+    <IconContainer name="Java">
+      <Java size="size-9" />
+    </IconContainer>
+    <IconContainer name="C++">
+      <CPlusPlus size="size-9" />
+    </IconContainer>
+  </div>
 
   <h3 class="text-xl text-zinc-200 font-medium mt-6 mb-4">Tools</h3>
   <div class="flex flex-wrap gap-5">
@@ -53,11 +73,17 @@ import Figma from "@assets/icons/figma.astro";
     <IconContainer name="Github">
       <Github size="size-9" />
     </IconContainer>
+    <IconContainer name="Maven">
+      <Maven size="size-9" />
+    </IconContainer>
     <IconContainer name="VSCode">
       <Vscode size="size-9" />
     </IconContainer>
     <IconContainer name="Figma">
       <Figma size="size-9" />
+    </IconContainer>
+    <IconContainer name="Apigee">
+      <Apigee size="size-9" />
     </IconContainer>
   </div>
 
@@ -65,8 +91,12 @@ import Figma from "@assets/icons/figma.astro";
     Drawings (For Funsies)
   </h3>
   <div class="flex flex-wrap gap-5">
-    <IconContainer name="Bash">
-      <Bash size="size-9" />
-    </IconContainer>
+    <ImageContainer name="Velociraptor" image="/images/velociraptor.png" />
+    <ImageContainer name="Dogpool" image="/images/dogpool.png" />
+    <ImageContainer name="Karlach" image="/images/karlach.png" />
+    <ImageContainer
+      name="Aaahh!!! Real Monsters"
+      image="/images/ah-real-monsters.png"
+    />
   </div>
 </section>

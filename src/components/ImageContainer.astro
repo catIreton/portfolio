@@ -1,12 +1,17 @@
 ---
 const name = Astro.props.name;
+const image = Astro.props.image;
 ---
 
 <div class="flex flex-col items-center justify-center">
   <div
     class="inline-flex flex-col items-center justify-center p-3 border rounded-md bg-zinc-800 border-zinc-600"
   >
-    <slot />
+    <img
+      class="w-full mb-5 shadow-xl rounded-lg md:w-52 md:mb-0"
+      src={image}
+      alt={`${name} image`}
+    />
   </div>
   <span class="text-zinc-200 text-sm mt-1 font-sans">{name}</span>
 </div>
