@@ -1,19 +1,30 @@
 ---
 import ProjectCard from "@components/ProjectCard.astro";
 import React from "@assets/icons/react.astro";
-import "../styles/global.css";
+import AstroIcon from "@assets/icons/astro.astro";
 ---
 
-<section class="my-20">
+<section class="my-14">
   <h2 class="text-2xl font-semibold mb-2">Projects</h2>
   <hr class="mb-6 border-zinc-600" />
 
   <ProjectCard
     projectTitle="Drug Wars Remake"
     projectDescription="Recreation of the 1984 Drug Wars game but set in Kansas City"
-    projectLink="https://github.com/catIreton/drugwars"
-    image="/portfolio/images/street-wars-classic.png"
+    projectLink="https://catireton.github.io/drugwars/"
+    githubLink="https://github.com/catIreton/drugwars"
+    image="/portfolio/images/og-preview.jpg"
   >
     <React />
+  </ProjectCard>
+
+  <ProjectCard
+    projectTitle="Portfolio"
+    projectDescription="Personal developer portfolio built with Astro and Tailwind CSS"
+    projectLink="https://catireton.github.io/portfolio/"
+    githubLink="https://github.com/catIreton/portfolio"
+    image="/portfolio/images/readme.png"
+  >
+    <AstroIcon />
   </ProjectCard>
 </section>

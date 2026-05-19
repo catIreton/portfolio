@@ -3,20 +3,21 @@ import Layout from "@layouts/Layout.astro";
 import Navbar from "@components/Navbar.astro";
 import ProfileSection from "@components/ProfileSection.astro";
 import AboutSection from "@components/AboutSection.astro";
+import ExperienceSection from "@components/ExperienceSection.astro";
 import ProjectsSection from "@components/ProjectsSection.astro";
 import SkillsSection from "@components/SkillsSection.astro";
 import FinalSection from "@components/FinalSection.astro";
-import "../styles/global.css";
 ---
 
-<Layout title="Cat Ireton">
-  <div class="min-w-[535px] max-w-screen-sm mx-auto py-16 px-8">
+<Layout title="Cat Ireton | Full Stack Software Developer" description="Full Stack Software Developer with 10+ years of experience in Angular, React, TypeScript, Java, and C#. Based in Lenexa, KS.">
+  <div class="max-w-3xl mx-auto py-16 px-8">
     <header>
       <Navbar />
       <ProfileSection />
     </header>
     <main>
       <AboutSection />
+      <ExperienceSection />
       <ProjectsSection />
       <SkillsSection />
     </main>

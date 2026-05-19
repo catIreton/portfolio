@@ -18,17 +18,19 @@ import ExtJS from "@assets/icons/extjs.astro";
 import Java from "@assets/icons/java.astro";
 import CPlusPlus from "@assets/icons/c-plus-plus.astro";
 import ImageContainer from "./ImageContainer.astro";
-import "../styles/global.css";
 import Bootstrap from "@assets/icons/bootstrap.astro";
 import AspNet from "@assets/icons/asp-net.astro";
 import Vb from "@assets/icons/vb.astro";
+import Claude from "@assets/icons/claude.astro";
+import Cursor from "@assets/icons/cursor.astro";
+import Typescript from "@assets/icons/typescript.astro";
 ---
 
-<section class="my-20">
-  <h2 class="text-2xl font-semibold mb-1">Skills</h2>
+<section class="my-14">
+  <h2 class="text-2xl font-semibold mb-2">Skills</h2>
   <hr class="mb-6 border-zinc-600" />
 
-  <h3 class="text-xl text-zinc-200 font-medium mb-4 siz">Frontend</h3>
+  <h3 class="text-xl text-zinc-200 font-medium mb-4">Frontend</h3>
   <div class="flex flex-wrap gap-5">
     <IconContainer name="HTML">
       <Html size="size-9" />
@@ -38,6 +40,9 @@ import Vb from "@assets/icons/vb.astro";
     </IconContainer>
     <IconContainer name="Javascript">
       <Javascript size="size-9" />
+    </IconContainer>
+    <IconContainer name="TypeScript">
+      <Typescript size="size-9" />
     </IconContainer>
     <IconContainer name="Angular">
       <Angular size="size-9" />
@@ -97,6 +102,16 @@ import Vb from "@assets/icons/vb.astro";
     </IconContainer>
     <IconContainer name="Apigee">
       <Apigee size="size-9" />
+    </IconContainer>
+  </div>
+
+  <h3 class="text-xl text-zinc-200 font-medium mt-6 mb-4">AI</h3>
+  <div class="flex flex-wrap gap-5">
+    <IconContainer name="Claude">
+      <Claude size="size-9" />
+    </IconContainer>
+    <IconContainer name="Cursor">
+      <Cursor size="size-9" />
     </IconContainer>
   </div>
 

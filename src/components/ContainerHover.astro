@@ -1,13 +1,19 @@
 ---
-import "../styles/global.css";
-
-const { link, title } = Astro.props;
+interface Props {
+  link: string;
+  title: string;
+  download?: boolean;
+}
+const { link, title, download } = Astro.props;
+const isExternal = !link.startsWith("mailto:") && !download;
 ---
 
 <a
-  class="hover:bg-zinc-800 hover:border-zinc-600 border border-transparent p-2 rounded-md transition"
+  class="hover:bg-zinc-800 hover:border-zinc-600 border border-transparent p-2 rounded-md transition-colors duration-150"
   href={link}
-  target="_blank"
+  target={isExternal ? "_blank" : undefined}
+  rel={isExternal ? "noopener noreferrer" : undefined}
+  download={download || undefined}
   title={title}
 >
   <slot />

@@ -1,8 +1,9 @@
 ---
-import "../styles/global.css";
-
-const name = Astro.props.name;
-const image = Astro.props.image;
+interface Props {
+  name: string;
+  image: string;
+}
+const { name, image } = Astro.props;
 ---
 
 <div class="flex flex-col items-center justify-center">
@@ -10,10 +11,11 @@ const image = Astro.props.image;
     class="inline-flex flex-col items-center justify-center p-3 border rounded-md bg-zinc-800 border-zinc-600"
   >
     <img
-      class="w-full mb-5 shadow-xl rounded-lg md:w-52 md:mb-0"
+      class="w-24 h-24 object-contain rounded"
       src={image}
-      alt={`${name} image`}
+      alt={name}
+      loading="lazy"
     />
   </div>
-  <span class="text-zinc-200 text-sm mt-1 font-sans">{name}</span>
+  <span class="text-zinc-200 text-sm mt-1">{name}</span>
 </div>

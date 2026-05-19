@@ -1,27 +1,52 @@
 ---
-const projectTitle = Astro.props.projectTitle;
-const projectDescription = Astro.props.projectDescription;
-const projectLink = Astro.props.projectLink;
-const image = Astro.props.image;
 import ArrowLink from "@assets/icons/arrow-link.astro";
-import "../styles/global.css";
+import Github from "@assets/icons/github.astro";
+
+interface Props {
+  projectTitle: string;
+  projectDescription: string;
+  projectLink: string;
+  githubLink?: string;
+  image: string;
+}
+const { projectTitle, projectDescription, projectLink, githubLink, image } = Astro.props;
 ---
 
-<article style={{
-  backgroundImage: 'radial-gradient(circle, #6c6c6c1d 0%, transparent 100%)'
-}}
-class="border border-zinc-700 bg-zinc-900 bg-opacity-40 p-8 rounded-lg flex flex-col-reverse md:flex-row justify-between mb-7 shadow-xl">
+<article
+  style={{ backgroundImage: "radial-gradient(circle, #6c6c6c1d 0%, transparent 100%)" }}
+  class="border border-zinc-700 bg-zinc-900/40 p-8 rounded-lg flex flex-col-reverse md:flex-row justify-between mb-7 shadow-xl"
+>
   <div>
-      <a class="text-xl inline-flex items-center gap-2 hover:opacity-60 transition mb-2" target="_blank" href={projectLink}>
-        <h3 class="text-xl font-semibold inline-block">{projectTitle}</h3>
-        <span class="text-zinc-200">
-          <ArrowLink size="w-5 h-5" />
-        </span>
+    <h3 class="text-xl font-semibold mb-2">{projectTitle}</h3>
+    <p class="text-zinc-200 text-sm text-pretty pr-2 mb-4">{projectDescription}</p>
+    <div class="flex items-center gap-4 mb-4">
+      <a
+        class="inline-flex items-center gap-1.5 text-sm hover:opacity-60 transition-opacity duration-150"
+        target="_blank"
+        rel="noopener noreferrer"
+        href={projectLink}
+      >
+        Live site <ArrowLink size="w-4 h-4" />
       </a>
-      <p class="text-zinc-200 text-sm text-pretty pr-2 mb-4">{projectDescription}</p>
+      {githubLink && (
+        <a
+          class="inline-flex items-center gap-1.5 text-sm text-zinc-200 hover:opacity-60 transition-opacity duration-150"
+          target="_blank"
+          rel="noopener noreferrer"
+          href={githubLink}
+        >
+          GitHub <Github size="w-4 h-4" />
+        </a>
+      )}
+    </div>
     <div class="flex items-center gap-3">
-      <slot/>
+      <slot />
     </div>
   </div>
-  <img class="w-full mb-5 shadow-xl rounded-lg md:w-52 md:mb-0" src={image} alt={`${projectTitle} image`} />
+  <img
+    class="w-full mb-5 shadow-xl rounded-lg md:w-52 md:mb-0"
+    src={image}
+    alt={projectTitle}
+    loading="lazy"
+  />
 </article>

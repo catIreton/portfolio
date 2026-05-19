@@ -1,7 +1,8 @@
 ---
-import "../styles/global.css";
-
-const name = Astro.props.name;
+interface Props {
+  name: string;
+}
+const { name } = Astro.props;
 ---
 
 <div class="flex flex-col items-center justify-center">
@@ -10,5 +11,5 @@ const name = Astro.props.name;
   >
     <slot />
   </div>
-  <span class="text-zinc-200 text-sm mt-1 font-sans">{name}</span>
+  <span class="text-zinc-200 text-sm mt-1">{name}</span>
 </div>

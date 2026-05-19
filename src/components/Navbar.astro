@@ -1,9 +1,10 @@
 ---
 import Github from "@assets/icons/github.astro";
 import Email from "@assets/icons/email.astro";
+import Linkedin from "@assets/icons/linkedin.astro";
+import ResumeIcon from "@assets/icons/resume.astro";
 import ContainerHover from "@components/ContainerHover.astro";
 import Codepen from "@assets/icons/codepen.astro";
-import "../styles/global.css";
 ---
 
 <nav class="w-full flex justify-end">
@@ -11,11 +12,17 @@ import "../styles/global.css";
     <ContainerHover link="mailto:iretoncat@gmail.com" title="Email">
       <Email />
     </ContainerHover>
+    <ContainerHover link="https://www.linkedin.com/in/catherine-ireton-7b5a50155/" title="LinkedIn">
+      <Linkedin />
+    </ContainerHover>
     <ContainerHover link="https://github.com/catIreton" title="Github">
       <Github />
     </ContainerHover>
     <ContainerHover link="https://codepen.io/asifelse" title="Codepen">
       <Codepen />
+    </ContainerHover>
+    <ContainerHover link="/portfolio/Cat-Ireton-Resume.pdf" title="Download Resume" download>
+      <ResumeIcon />
     </ContainerHover>
   </div>
 </nav>

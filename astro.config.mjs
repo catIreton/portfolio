@@ -10,4 +10,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  server: {
+    open: true,
+  },
+  devToolbar: {
+    enabled: !process.env.PLAYWRIGHT_TEST,
+  },
 });

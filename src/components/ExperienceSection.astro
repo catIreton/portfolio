@@ -1,0 +1,79 @@
+---
+import ExperienceCard from "@components/ExperienceCard.astro";
+---
+
+<section class="my-14">
+  <h2 class="text-2xl font-semibold mb-2">Experience</h2>
+  <hr class="mb-6 border-zinc-600" />
+
+  <ExperienceCard
+    jobTitle="Staff Front End Engineer"
+    company="Uplight"
+    dates="Nov 2020 – Jan 2025"
+    bullets={[
+      "Migrated from monolith application to Single-page application, implementing features and improving UI responsiveness for mobile usage",
+      "Developed a shareable design library of Angular components with multiple customizable options",
+      "Utilized Storybook to share components in isolation for easy verification of behavior and appearance",
+      "Used Jasmine to write unit tests for greater code coverage and reliability",
+      "Member of Women in Technology group",
+    ]}
+  />
+
+  <ExperienceCard
+    jobTitle="Associate Senior Software Engineer"
+    company="Cerner"
+    dates="Mar 2019 – Nov 2020"
+    bullets={[
+      "Led newly created team responsible for modernization of security products",
+      "Responsible for backlog prioritization, story creation, and release planning",
+      "Provided support for Win32 applications using C# and C++",
+      "Developed queue-based services using IBM MQ and Java",
+      "Leveraged Docker containers for services and Gradle builds",
+      "Cerner Hackathon Winner – 2020",
+    ]}
+  />
+
+  <ExperienceCard
+    jobTitle="Freelancer"
+    company="Spire (Upwork)"
+    dates="Sep 2018 – Mar 2019"
+    bullets={[
+      "Created responsive Apigee Developer Portal using Angular and SCSS",
+      "Designed APIs using Apigee API Management Tool",
+      "Defined API specs using OpenAPI",
+    ]}
+  />
+
+  <ExperienceCard
+    jobTitle="Software Engineer"
+    company="DST Systems"
+    dates="Jun 2013 – Feb 2019"
+    bullets={[
+      "Developed new web applications using Java, Ext JS, JavaScript, SQL PL, and Angular",
+      "Built SOAP services with Spring WS, Spring MVC, and Spring Boot",
+      "Responsible for various design aspects of the application using UMLet",
+      "Collaborated with team in backlog grooming and sprint planning sessions",
+      "Tested code using Jasmine, JUnit, and manual tests",
+      "DST Hackathon Winner – 2017",
+    ]}
+  />
+
+  <h2 class="text-2xl font-semibold mt-14 mb-2">Education</h2>
+  <hr class="mb-6 border-zinc-600" />
+
+  <ExperienceCard
+    jobTitle="Bachelor of Science, Computer Information Sciences"
+    company="Washburn University"
+    dates="May 2010"
+    bullets={["Member of WU Student Computing Club"]}
+    stacked
+  />
+
+  <ExperienceCard
+    jobTitle="Bachelor of Arts, Psychology"
+    company="Washburn University"
+    dates="Dec 2009"
+    bullets={["Member of Psi Chi"]}
+    stacked
+  />
+</section>
