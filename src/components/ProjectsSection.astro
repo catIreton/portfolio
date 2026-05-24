@@ -1,7 +1,5 @@
 ---
 import ProjectCard from "@components/ProjectCard.astro";
-import React from "@assets/icons/react.astro";
-import AstroIcon from "@assets/icons/astro.astro";
 ---
 
 <section class="my-14">
@@ -9,14 +7,22 @@ import AstroIcon from "@assets/icons/astro.astro";
   <hr class="mb-6 border-zinc-600" />
 
   <ProjectCard
+    projectTitle="On Rewind Video"
+    projectDescription="A video rental store simulation game set in the 90s. Help customers find the perfect tape before your shift ends."
+    projectLink="https://catireton.github.io/late-fee/"
+    githubLink="https://github.com/catIreton/late-fee"
+    image="/portfolio/images/late-fee.png"
+    techs={["TypeScript", "Phaser 3", "Vite"]}
+  />
+
+  <ProjectCard
     projectTitle="Drug Wars Remake"
     projectDescription="Recreation of the 1984 Drug Wars game but set in Kansas City"
     projectLink="https://catireton.github.io/drugwars/"
     githubLink="https://github.com/catIreton/drugwars"
     image="/portfolio/images/og-preview.jpg"
-  >
-    <React />
-  </ProjectCard>
+    techs={["React", "JavaScript", "Material UI", "Leaflet"]}
+  />
 
   <ProjectCard
     projectTitle="Portfolio"
@@ -24,7 +30,6 @@ import AstroIcon from "@assets/icons/astro.astro";
     projectLink="https://catireton.github.io/portfolio/"
     githubLink="https://github.com/catIreton/portfolio"
     image="/portfolio/images/readme.png"
-  >
-    <AstroIcon />
-  </ProjectCard>
+    techs={["Astro", "TypeScript", "Tailwind CSS"]}
+  />
 </section>

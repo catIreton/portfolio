@@ -8,8 +8,9 @@ interface Props {
   projectLink: string;
   githubLink?: string;
   image: string;
+  techs?: string[];
 }
-const { projectTitle, projectDescription, projectLink, githubLink, image } = Astro.props;
+const { projectTitle, projectDescription, projectLink, githubLink, image, techs = [] } = Astro.props;
 ---
 
 <article
@@ -39,8 +40,10 @@ const { projectTitle, projectDescription, projectLink, githubLink, image } = Ast
         </a>
       )}
     </div>
-    <div class="flex items-center gap-3">
-      <slot />
+    <div class="flex flex-wrap items-center gap-2">
+      {techs.map((tech) => (
+        <span class="text-xs px-2 py-0.5 rounded border border-zinc-600 text-zinc-400">{tech}</span>
+      ))}
     </div>
   </div>
   <img
