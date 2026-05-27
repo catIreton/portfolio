@@ -78,3 +78,6 @@ The CI pipeline runs `typecheck` and unit tests before the build step — a fail
 - **Dark/light mode toggle** — Theme switcher persisted to `localStorage`
 - **Responsive polish** — Remove the `min-w-[535px]` floor and fully test on mobile viewports
 - **Finance of America** — Add current role to Experience section once details are ready to share publicly
+- **Astro Image optimization** — Migrate project screenshots and drawings from `public/images/` to `src/assets/images/` and replace plain `<img>` with Astro's `<Image>` component for automatic format conversion, resizing, and lazy loading
+- **ProjectCard CLS** — Add explicit `width` and `height` attributes to project card `<img>` elements so the browser can reserve space before images load, eliminating layout shift
+- **Multi-browser testing** — Expand Playwright config to run the E2E suite against Firefox and WebKit in addition to Chromium

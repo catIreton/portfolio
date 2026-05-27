@@ -20,7 +20,9 @@
     padding: 0;
     font-family: var(--font-body);
     background-color: var(--color-bg);
-    background-image: radial-gradient(ellipse at 60% 0%, oklch(35% 0.08 185 / 0.4) 0%, transparent 65%);
+    background-image:
+      radial-gradient(ellipse at 70% 0%, oklch(35% 0.08 185 / 0.55) 0%, transparent 60%),
+      radial-gradient(ellipse at 15% 90%, oklch(28% 0.06 185 / 0.3) 0%, transparent 45%);
     color: var(--color-primary);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;

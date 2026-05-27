@@ -9,7 +9,7 @@ interface Props {
 const { jobTitle, company, dates, bullets, stacked = false } = Astro.props;
 ---
 
-<div class="mb-8 pl-4 border-l-2 border-teal-700">
+<div class="mb-8 pl-4 border-l-2 border-teal-700 hover:border-teal-500 transition-colors duration-200 relative before:absolute before:-left-[5px] before:top-0 before:w-2 before:h-2 before:rounded-full before:bg-teal-700 hover:before:bg-teal-500">
   {stacked ? (
     <div class="mb-1">
       <span class="font-semibold text-lg block">{jobTitle}</span>

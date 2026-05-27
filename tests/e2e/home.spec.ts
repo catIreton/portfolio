@@ -19,16 +19,36 @@ test.describe("Portfolio home page", () => {
     await expect(page.getByRole("heading", { name: "Skills" })).toBeVisible();
   });
 
+  test("Stay Tuned project links to the live site", async ({ page }) => {
+    const card = page.locator("article").filter({ hasText: "Stay Tuned" });
+    const link = card.getByRole("link", { name: "Live site" });
+    await expect(link).toHaveAttribute("href", "https://catireton.github.io/stay-tuned/");
+  });
+
+  test("all project cards have a visible image", async ({ page }) => {
+    const cards = await page.locator("article").all();
+    expect(cards.length).toBeGreaterThan(0);
+    for (const card of cards) {
+      await expect(card.locator("img")).toBeVisible();
+    }
+  });
+
   test("Drug Wars project links to the live site", async ({ page }) => {
-    const link = page.locator("article").first().getByRole("link", { name: "Live site" });
+    const card = page.locator("article").filter({ hasText: "Drug Wars" });
+    const link = card.getByRole("link", { name: "Live site" });
     await expect(link).toHaveAttribute("href", "https://catireton.github.io/drugwars/");
   });
 
   test("Drug Wars project card shows an image with alt text", async ({ page }) => {
-    const img = page.locator("article img").first();
+    const img = page.locator("article").filter({ hasText: "Drug Wars" }).locator("img");
     await expect(img).toBeVisible();
     const alt = await img.getAttribute("alt");
     expect(alt?.trim().length).toBeGreaterThan(0);
+  });
+
+  test("Jensen Ackles drawing is visible in the skills section", async ({ page }) => {
+    const img = page.getByAltText(/jensen ackles/i);
+    await expect(img).toBeVisible();
   });
 
   test("Skills section contains AI category", async ({ page }) => {

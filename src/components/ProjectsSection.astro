@@ -4,7 +4,16 @@ import ProjectCard from "@components/ProjectCard.astro";
 
 <section class="my-14">
   <h2 class="text-2xl font-semibold mb-2">Projects</h2>
-  <hr class="mb-6 border-zinc-600" />
+  <div class="mb-6 h-px bg-gradient-to-r from-zinc-600 to-transparent"></div>
+
+  <ProjectCard
+    projectTitle="Stay Tuned"
+    projectDescription="A retro CRT-aesthetic TV show tracker. Search for shows, track episodes, manage viewing status, and add ratings and notes — all with a nostalgic phosphor-green interface."
+    projectLink="https://catireton.github.io/stay-tuned/"
+    githubLink="https://github.com/catIreton/stay-tuned"
+    image="/portfolio/images/stay-tuned.png"
+    techs={["Next.js", "TypeScript", "Tailwind CSS", "Zustand", "TanStack Query"]}
+  />
 
   <ProjectCard
     projectTitle="Rules Lawyer"

@@ -9,7 +9,7 @@ const isExternal = !link.startsWith("mailto:") && !download;
 ---
 
 <a
-  class="hover:bg-zinc-800 hover:border-zinc-600 border border-transparent p-2 rounded-md transition-colors duration-150"
+  class="hover:bg-zinc-800 hover:border-zinc-600 border border-transparent p-2 rounded-md transition-all duration-150 hover:scale-110"
   href={link}
   target={isExternal ? "_blank" : undefined}
   rel={isExternal ? "noopener noreferrer" : undefined}
